@@ -4,8 +4,8 @@ import React, { useEffect, useRef } from "react";
 import H from '@here/maps-api-for-javascript';
 
 const Map = ( props: { apikey: string } ) => {
-    const mapRef = useRef(null);
-    const map = useRef(null);
+    const mapRef : any = useRef(null);
+    const map : any = useRef(null);
     const platform : any = useRef(null);
     const { apikey } = props;
 
@@ -30,7 +30,7 @@ const Map = ( props: { apikey: string } ) => {
                 // Create a new Tile layer with the Raster Tile provider
                 const rasterTileLayer = new H.map.layer.TileLayer(rasterTileProvider);
                 // Create a new map instance with the Tile layer, center and zoom level
-                const newMap = new H.map(mapRef.current, rasterTileLayer, {
+                const newMap = new H.Map(mapRef.current, rasterTileLayer, {
                     pixelRatio: window.devicePixelRatio,
                     center: {
                         lat: 64.144,
