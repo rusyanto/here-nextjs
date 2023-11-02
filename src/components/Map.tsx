@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef } from "react";
-import H from '@here/maps-api-for-javascript';
+// import H from '@here/maps-api-for-javascript';
 
 const Map = ( props: { apikey: string } ) => {
     const mapRef : any = useRef(null);
@@ -33,8 +33,8 @@ const Map = ( props: { apikey: string } ) => {
                 const newMap = new H.Map(mapRef.current, rasterTileLayer, {
                     pixelRatio: window.devicePixelRatio,
                     center: {
-                        lat: 64.144,
-                        lng: -21.94,
+                        lat: 14.60487,
+                        lng: 120.98627,
                     },
                     zoom: 14,
                 });
